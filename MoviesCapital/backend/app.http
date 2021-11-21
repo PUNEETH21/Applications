@@ -1,0 +1,100 @@
+###
+//sign up api
+POST http://localhost:4005/register/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+
+
+###
+//login api
+POST http://localhost:4005/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+
+
+###
+//get popular movies api
+GET http://localhost:4005/movies/popular
+
+
+
+###
+//get latest movies api
+GET http://localhost:4005/movies/latest
+
+
+
+
+###
+// get movie details
+GET http://localhost:4005/movie/566525
+
+
+###
+// get favourite movies api
+GET http://localhost:4005/favourites
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjM3NDg4ODU3fQ.J3q1V6ad_rBL2dA4TlvHlW3HzjLNRwYK6tUGu8d8OKc
+// keep jwt token after Bearer in the above line
+
+###
+//add favourite movie api
+POST http://localhost:4005/movie/favourite
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjM3NDg4ODU3fQ.J3q1V6ad_rBL2dA4TlvHlW3HzjLNRwYK6tUGu8d8OKc
+
+{
+  "movieDetails": {
+      "backdrop_path": "/t9nyF3r0WAlJ7Kr6xcRYI4jr9jm.jpg",
+      "id": 566525,
+      "original_language": "en",
+      "original_title": "Venom: Let There Be Carnage",
+      "overview": "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+      "popularity": 8830.327,
+      "poster_path": "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+      "release_date": "2021-09-30",
+      "title": "Venom: Let There Be Carnage",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 239
+  }
+}
+
+
+###
+//writing popular movies to json file
+GET http://localhost:4005/popularmovies/create
+
+
+
+###
+// writing movie details to json file
+GET http://localhost:4005/moviedetails/create
+
+
+
+###
+// tables delete
+GET http://localhost:4005/delete
+
+
+###
+// create user table
+GET http://localhost:4005/create
+
+
+###
+// create movie table
+GET http://localhost:4005/create/movie/
+
+
